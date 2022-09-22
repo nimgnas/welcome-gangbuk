@@ -8,14 +8,6 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -70,15 +62,12 @@
         padding: 40px;
         width: 500px;
         height: 500px;
-        background-color: #eef1ff;
+        background-color: #cfd2cf;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         margin: auto 0;
         border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-          rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-          rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
       }
 
       .title_wrapper {
@@ -109,35 +98,29 @@
         />
       </div>
       <div class="input_wrapper">
-        <div class="field">
-          <div class="control has-icons-left has-icons-right">
-            <input
-              class="input"
-              type="text"
-              placeholder="ID"
-              id="floatingInput"
-            />
-            <span class="icon is-small is-left">
-              <i class="fas fa-user"></i>
-            </span>
-          </div>
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            placeholder="ID"
+          />
+          <label for="floatingInput">ID</label>
         </div>
-        <div class="field">
-          <p class="control has-icons-left">
-            <input
-              class="input"
-              type="password"
-              placeholder="Password"
-              id="floatingPassword"
-            />
-            <span class="icon is-small is-left">
-              <i class="fas fa-lock"></i>
-            </span>
-          </p>
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="PW"
+          />
+          <label for="floatingPassword">PW</label>
         </div>
       </div>
       <div class="btn_wrapper">
-        <button class="button" onclick="login()">로그인 / 회원가입</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="login()">
+          로그인 / 회원가입
+        </button>
       </div>
     </div>
   </body>
