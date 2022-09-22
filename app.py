@@ -1,3 +1,4 @@
+from cmath import log
 from bson.objectid import ObjectId
 from flask import Flask, render_template, request, jsonify
 from pymongo import MongoClient
@@ -6,6 +7,7 @@ import bcrypt
 from datetime import timedelta, datetime
 import jwt
 import xml.etree.ElementTree as ET
+import json
 
 client = MongoClient('mongodb+srv://test:sparta@cluster0.tm0bxlm.mongodb.net/?retryWrites=true&w=majority')
 db = client.dbsparta
@@ -100,7 +102,8 @@ def login(id_receive, pw_receive, db_pw):
         # SECRET_KEY = 임의로 지정한 string값
         # algoriithm = HS256 서명 알고리즘을 사용해 암호화
         token = jwt.encode(payload, SECRET_KEY, algorithm='HS256') 
-        doc = {'result':'success', 'token':token}
+        print(token)
+        doc = {'result':'success', 'token':token.decode('utf-8')} # aws ec2에 업로드시 token을 decode 해줘야함
         return doc
     else:
         doc = {'result':'fail', 'msg':'패스워드를 확인해주세요!'}
