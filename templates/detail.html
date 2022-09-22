@@ -1,269 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title>Title</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
     <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
     ></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-            href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap"
-            rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap"
+      rel="stylesheet"
     />
 
     <style>
-        * {
-            font-family: "Gowun Dodum", sans-serif;
+      * {
+        font-family: "Gowun Dodum", sans-serif;
+      }
 
-        }
+      .mainlogo {
+        /*width: 120px;*/
+        /*height: 60px;*/
+        /*margin: 15px auto 0 auto;*/
 
-        .mainlogo {
-            /*width: 120px;*/
-            /*height: 60px;*/
-            /*margin: 15px auto 0 auto;*/
+        padding: 20px;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-bottom: 1px solid transparent;
+      }
 
-            padding: 20px;
-            height: 20vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            border-bottom: 1px solid transparent;
-        {#background-color: #eef1ff;#} background-color: #FFAEC0;
-        }
+      .mytitle {
+        /*background-color: green;*/
+        /*margin-left:auto;*/
 
-        .mytitle {
-            /*background-color: green;*/
-            /*margin-left:auto;*/
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: center;*/
+        /*align-items: center;*/
 
-            /*display: flex;*/
-            /*flex-direction: column;*/
-            /*justify-content: center;*/
-            /*align-items: center;*/
+        right: 0;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+      }
 
-            right: 0;
-            position: absolute;
-            right: 20px;
-            bottom: 20px;
-        }
+      .logout {
+        width: auto;
+        height: auto;
+        background-color: #eef1ff;
+      }
 
-        .logout {
-            width: auto;
-            height: auto;
-            background-color: #eef1ff;
+      .logout:hover {
+        border: 1px solid white;
+        text-line-through-color: black;
+      }
 
-        }
+      .mypost {
+        margin-top: 15px;
 
-        .logout:hover {
-            border: 1px solid white;
-            text-line-through-color: black;
-        }
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .mypost {
-            margin-top: 15px;
+      .myphoto {
+        width: 400px;
+        height: 300px;
+        margin: 15px 10px 0 0;
 
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
+        box-shadow: 0px 0px 3px 0px black;
+        border-radius: 3px;
+        float: left;
 
-        .myphoto {
-            width: 400px;
-            height: 300px;
-            margin:15px 10px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-            box-shadow: 0px 0px 3px 0px black;
-            border-radius: 3px;
-            float: left;
+        overflow: hidden;
+        object-fit: cover;
+      }
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+      .myintro {
+        width: 450px;
+        height: 300px;
+        margin-top: 15px;
 
-            overflow: hidden;
-            object-fit: cover;
-        }
+        box-shadow: 0px 0px 3px 0px black;
+        border-radius: 3px;
+        float: left;
 
-        .myintro {
-            width: 450px;
-            height: 300px;
-            margin-top:15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
 
-            box-shadow: 0px 0px 3px 0px black;
-            border-radius: 3px;
-            float: left;
+      .mybtn1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-        }
+        margin-top: 10px;
+      }
 
-        .mybtn1 {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+      .mybtn1 > button {
+        margin-right: 10px;
+        margin-bottom: 15px;
+      }
 
-            margin-top: 10px;
-        }
+      .mybtn1 > button:hover {
+        border: 1px solid black;
+      }
 
-        .mybtn1 > button {
-            margin-right: 10px;
-            margin-bottom: 15px;
-        }
+      .comment2 {
+        padding: 20px;
+        width: 860px;
 
-        .mybtn1 > button:hover {
-            border: 1px solid black;
-        }
+        box-shadow: 0px 0px 3px 0px black;
+        border-radius: 3px;
+      }
 
-        .comment2 {
-            padding: 20px;
-            width: 860px;
+      .comment-box {
+        width: 860px;
+        height: 300px;
+        margin: 30px auto 0 auto;
+        /*border: 1px solid gray;*/
 
-            box-shadow: 0px 0px 3px 0px black;
-            border-radius: 3px;
-        }
+        /*box-shadow: 0px 0px 3px 0px gray;*/
+        display: none;
+      }
 
-        .comment-box {
-            width: 860px;
-            height: 300px;
-            margin: 30px auto 0 auto;
-            /*border: 1px solid gray;*/
+      .mybtn2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
-            /*box-shadow: 0px 0px 3px 0px gray;*/
-            display: none;
-        }
+        margin-bottom: 10px;
+      }
 
-        .mybtn2 {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+      .mybtn2 > button {
+        margin-top: 20px;
+        margin-right: 20px;
+      }
 
-            margin-bottom: 10px;
-        }
+      .mybtn2 > button:hover {
+        border: 1px solid black;
+      }
 
-        .mybtn2 > button {
-            margin-top: 20px;
-            margin-right: 20px;
-        }
+      .mycards {
+        width: 860px;
+        margin: auto;
+      }
 
-        .mybtn2 > button:hover {
-            border: 1px solid black;
-        }
+      .mycards > .card {
+        margin-top: 20px;
+        box-shadow: 0px 0px 2px 0px black;
+      }
 
-        .mycards {
-            width: 860px;
-            margin: auto;
-        }
+      .title1 {
+        width: 420px;
+        height: 30px;
+        margin-top: 10px;
+      }
 
-        .mycards > .card {
-            margin-top: 20px;
-            box-shadow: 0px 0px 2px 0px black;
-        }
+      .overview1 {
+        width: 420px;
+        height: 200px;
+        margin: auto;
 
-        .title1 {
-            width: 420px;
-            height: 30px;
-            margin-top: 10px;
-        }
+        overflow: auto;
 
-
-        .overview1 {
-            width: 420px;
-            height: 200px;
-            margin: auto;
-
-            overflow: auto;
-
-
-            /*animation-name: slide;*/
-            /*animation-duration: 10s;*/
-            /*animation-timing-function: linear;*/
-            /*animation-iteration-count: infinite;*/
-            /*-webkit-animation-name: slide;*/
-            /*-webkit-animation-duration: 10s;*/
-            /*-webkit-animation-timing-function: linear;*/
-            /*-webkit-animation-iteration-count: infinite;*/
-
-        }
-        {#.wrap {#}
-        {#    background-color: #FFAEC0;#}
-        {#}#}
-
+        /*animation-name: slide;*/
+        /*animation-duration: 10s;*/
+        /*animation-timing-function: linear;*/
+        /*animation-iteration-count: infinite;*/
+        /*-webkit-animation-name: slide;*/
+        /*-webkit-animation-duration: 10s;*/
+        /*-webkit-animation-timing-function: linear;*/
+        /*-webkit-animation-iteration-count: infinite;*/
+      }
     </style>
 
     <script>
+      (async () => {
+        let response = await fetch(
+          "http://apis.data.go.kr/B551011/KorService/detailCommon?ServiceKey=mQAMhjQC%2F7qisyhBIjGCYD9j36KrDjfglxFNRZCeleOJHTXBKkifUz32L57ylof4xca4y51pyLUtsx%2BVJ47hjw%3D%3D&contentTypeId=12&contentId=126524&MobileOS=ETC&MobileApp=AppTest&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
+        );
+        let t_xml = await response.text();
 
-        (async () => {
-            let response = await fetch(
-                "http://apis.data.go.kr/B551011/KorService/detailCommon?ServiceKey=mQAMhjQC%2F7qisyhBIjGCYD9j36KrDjfglxFNRZCeleOJHTXBKkifUz32L57ylof4xca4y51pyLUtsx%2BVJ47hjw%3D%3D&contentTypeId=12&contentId=126524&MobileOS=ETC&MobileApp=AppTest&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
-            );
-            let t_xml = await response.text();
+        let parseXML = new DOMParser();
+        let xmlDoc = parseXML.parseFromString(t_xml, "text/xml");
 
-            let parseXML = new DOMParser();
-            let xmlDoc = parseXML.parseFromString(t_xml, "text/xml");
+        // querySelector = DOM에서 class, id, tag를 가져올 수 있는 함수
+        // xml은 DOM과 비슷하다고 생각하시면 됩니다!
+        let title = xmlDoc.querySelector("title").textContent; // xmlDoc에서 title tag를 선택후 내부 값을textContent로 가져온다
+        let img = xmlDoc.querySelector("firstimage").textContent;
+      })();
 
-            // querySelector = DOM에서 class, id, tag를 가져올 수 있는 함수
-            // xml은 DOM과 비슷하다고 생각하시면 됩니다!
-            let title = xmlDoc.querySelector("title").textContent; // xmlDoc에서 title tag를 선택후 내부 값을textContent로 가져온다
-            let img = xmlDoc.querySelector("firstimage").textContent;
-        })();
+      function logout1() {
+        alert("로그아웃 완료!");
+        logout();
+      }
 
-        function logout1() {
-            alert("로그아웃 완료!");
-            logout();
-        }
+      function open_box() {
+        $("#comment1").show();
+      }
 
-        function open_box() {
-            $("#comment1").show();
-        }
+      function close_box() {
+        $("#comment1").hide();
+      }
 
-        function close_box() {
-            $("#comment1").hide();
-        }
+      $(document).ready(function () {
+        check_token();
+        show_comment();
+        items();
+      });
 
-        $(document).ready(function () {
-            check_token();
-            show_comment();
-            items();
-        });
+      function show_comment() {
+        $("#comment-list").empty();
+        $.ajax({
+          type: "GET",
+          url: "/gangbuk",
+          data: {},
+          success: function (response) {
+            let rows = response["comments"];
+            for (let i = 0; i < rows.length; i++) {
+              let name = rows[i]["name"];
+              let comment = rows[i]["comment"];
 
-        function show_comment() {
-            $("#comment-list").empty();
-            $.ajax({
-                type: "GET",
-                url: "/gangbuk",
-                data: {},
-                success: function (response) {
-                    let rows = response["comments"];
-                    for (let i = 0; i < rows.length; i++) {
-                        let name = rows[i]["name"];
-                        let comment = rows[i]["comment"];
-
-                        let temp_html = `<div class="card">
+              let temp_html = `<div class="card">
                                             <div class="card-body">
                                                 <blockquote class="blockquote mb-0">
                                                     <p>${comment}</p>
@@ -272,61 +264,61 @@
                                             </div>
                                         </div>`;
 
-                        $("#comment-list").append(temp_html);
-                    }
-                },
-            });
-        }
-
-        function save_comment() {
-            let name = $("#name").val();
-            let comment = $("#comment").val();
-
-            $.ajax({
-                type: "POST",
-                url: "/gangbuk",
-                data: {name_give: name, comment_give: comment},
-                success: function (response) {
-                    alert(response["msg"]);
-                    window.location.reload();
-                },
-            });
-        }
-
-        function items() {
-            // ****
-            const contentId = get_queryString();
-            const typeId = get_typeId();
-
-            let title, firstimage, overview;
-
-            if (typeId === "99") {
-                get_dbDetail(contentId);
-                return;
+              $("#comment-list").append(temp_html);
             }
+          },
+        });
+      }
 
-            let URL = `http://apis.data.go.kr/B551011/KorService/detailCommon?ServiceKey=mQAMhjQC%2F7qisyhBIjGCYD9j36KrDjfglxFNRZCeleOJHTXBKkifUz32L57ylof4xca4y51pyLUtsx%2BVJ47hjw%3D%3D&contentTypeId=${typeId}&contentId=${contentId}&MobileOS=ETC&MobileApp=AppTest&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y`;
-            console.log(URL);
-            $.ajax({
-                type: "GET",
-                url: `http://apis.data.go.kr/B551011/KorService/detailCommon?ServiceKey=mQAMhjQC%2F7qisyhBIjGCYD9j36KrDjfglxFNRZCeleOJHTXBKkifUz32L57ylof4xca4y51pyLUtsx%2BVJ47hjw%3D%3D&contentTypeId=${typeId}&contentId=${contentId}&MobileOS=ETC&MobileApp=AppTest&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y`,
-                data: {},
-                success: function (response) {
-                    let html = response.documentElement; // response를 받아 DOM(xml)으로 변환 한다.
-                    title = html.querySelector("title").textContent; // xmlDoc에서 title tag를 선택후 내부 값을textContent로 가져온다
-                    firstimage = html.querySelector("firstimage").textContent;
-                    overview = html.querySelector("overview").textContent;
+      function save_comment() {
+        let name = $("#name").val();
+        let comment = $("#comment").val();
 
-                    let items = response.getElementsByTagName("item");
-                    for (let i = 0; i < items.length; i++) {
-                        // const contentid =
-                        //   items[i].getElementsByTagName("contentid").textContent;
-                        // const firstimage =
-                        //   items[i].getElementsByTagName("firstimage").image;
-                        // const title = items[i].getElementsByTagName("title").textContent;
-                        // const overview =
-                        //   items[i].getElementsByTagName("overview").textContent;
-                        let temp_html = `<div class="myphoto" id="firstimage">
+        $.ajax({
+          type: "POST",
+          url: "/gangbuk",
+          data: { name_give: name, comment_give: comment },
+          success: function (response) {
+            alert(response["msg"]);
+            window.location.reload();
+          },
+        });
+      }
+
+      function items() {
+        // ****
+        const contentId = get_queryString();
+        const typeId = get_typeId();
+
+        let title, firstimage, overview;
+
+        if (typeId === "99") {
+          get_dbDetail(contentId);
+          return;
+        }
+
+        let URL = `http://apis.data.go.kr/B551011/KorService/detailCommon?ServiceKey=mQAMhjQC%2F7qisyhBIjGCYD9j36KrDjfglxFNRZCeleOJHTXBKkifUz32L57ylof4xca4y51pyLUtsx%2BVJ47hjw%3D%3D&contentTypeId=${typeId}&contentId=${contentId}&MobileOS=ETC&MobileApp=AppTest&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y`;
+        console.log(URL);
+        $.ajax({
+          type: "GET",
+          url: `http://apis.data.go.kr/B551011/KorService/detailCommon?ServiceKey=mQAMhjQC%2F7qisyhBIjGCYD9j36KrDjfglxFNRZCeleOJHTXBKkifUz32L57ylof4xca4y51pyLUtsx%2BVJ47hjw%3D%3D&contentTypeId=${typeId}&contentId=${contentId}&MobileOS=ETC&MobileApp=AppTest&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y`,
+          data: {},
+          success: function (response) {
+            let html = response.documentElement; // response를 받아 DOM(xml)으로 변환 한다.
+            title = html.querySelector("title").textContent; // xmlDoc에서 title tag를 선택후 내부 값을textContent로 가져온다
+            firstimage = html.querySelector("firstimage").textContent;
+            overview = html.querySelector("overview").textContent;
+
+            let items = response.getElementsByTagName("item");
+            for (let i = 0; i < items.length; i++) {
+              // const contentid =
+              //   items[i].getElementsByTagName("contentid").textContent;
+              // const firstimage =
+              //   items[i].getElementsByTagName("firstimage").image;
+              // const title = items[i].getElementsByTagName("title").textContent;
+              // const overview =
+              //   items[i].getElementsByTagName("overview").textContent;
+              let temp_html = `<div class="myphoto" id="firstimage">
                                                 <img src="${firstimage}" style="width:400px;" />
                                             </div>
                                             <div class="myintro">
@@ -338,22 +330,22 @@
                                                 </div>
                                             </div>
                                         `;
-                        $("#myposts").append(temp_html);
-                    }
-                },
-            });
-        }
+              $("#myposts").append(temp_html);
+            }
+          },
+        });
+      }
 
-        function get_dbDetail(contentId) {
-            $.ajax({
-                type: "GET",
-                url: `/api/detail?contentId=${contentId}`,
-                data: {},
-                success: function (response) {
-                    title = response.title;
-                    firstimage = response.img;
-                    overview = response.desc;
-                    let temp_html = `<div class="myphoto" id="firstimage">
+      function get_dbDetail(contentId) {
+        $.ajax({
+          type: "GET",
+          url: `/api/detail?contentId=${contentId}`,
+          data: {},
+          success: function (response) {
+            title = response.title;
+            firstimage = response.img;
+            overview = response.desc;
+            let temp_html = `<div class="myphoto" id="firstimage">
                                                 <img src="${firstimage}" style="width:400px;" />
                                             </div>
                                             <div class="myintro">
@@ -365,98 +357,99 @@
                                                 </div>
                                             </div>
                                         `;
-                    $("#myposts").append(temp_html);
-                }
-            });
-        }
+            $("#myposts").append(temp_html);
+          },
+        });
+      }
 
-        // URL contentId가 적혀있는 파라미터를 받아오는 함수 ****
-        function get_queryString() {
-            const pathName = window.location.pathname; // location.pathname 함수를 사용해 도메인 뒤 주소를 가져온다.
-            const query = location.search;
-            const contentId = new URLSearchParams(query).get("contentId");
+      // URL contentId가 적혀있는 파라미터를 받아오는 함수 ****
+      function get_queryString() {
+        const pathName = window.location.pathname; // location.pathname 함수를 사용해 도메인 뒤 주소를 가져온다.
+        const query = location.search;
+        const contentId = new URLSearchParams(query).get("contentId");
 
-            return contentId;
-        }
+        return contentId;
+      }
 
-        // URL typeId 적혀있는 파라미터를 받아오는 함수 ****
-        function get_typeId() {
-            const pathName = window.location.pathname; // location.pathname 함수를 사용해 도메인 뒤 주소를 가져온다.
-            const typeId = pathName.slice(8, 10); // pathName에서 typeId를 나타내는 주소만 가져온다
-            return typeId;
-        }
+      // URL typeId 적혀있는 파라미터를 받아오는 함수 ****
+      function get_typeId() {
+        const pathName = window.location.pathname; // location.pathname 함수를 사용해 도메인 뒤 주소를 가져온다.
+        const typeId = pathName.slice(8, 10); // pathName에서 typeId를 나타내는 주소만 가져온다
+        return typeId;
+      }
 
-        // // 로컬 스토리지 토큰 존재여부 확인, 토큰 체크
-        function check_token() {
-            token = window.localStorage.getItem("token");
-            if (!token) window.location.href = "/";
+      // // 로컬 스토리지 토큰 존재여부 확인, 토큰 체크
+      function check_token() {
+        token = window.localStorage.getItem("token");
+        if (!token) window.location.href = "/";
 
-            $.ajax({
-                type: "POST",
-                url: "/api/tokenCheck",
-                data: {token_give: token},
-                success: function (response) {
-                    if (response.result === "fail") {
-                        alert(response.msg);
-                        logout();
-                    }
-                },
-            });
-        }
+        $.ajax({
+          type: "POST",
+          url: "/api/tokenCheck",
+          data: { token_give: token },
+          success: function (response) {
+            if (response.result === "fail") {
+              alert(response.msg);
+              logout();
+            }
+          },
+        });
+      }
 
-        function logout() {
-            window.localStorage.removeItem("token");
-            window.location.href = "/";
-        }
-
-
+      function logout() {
+        window.localStorage.removeItem("token");
+        window.location.href = "/";
+      }
     </script>
-</head>
-<body>
-<div class="mainlogo" alt="logo">
-    <a href="http://192.168.219.100:4000/intro/"><img
-            src="https://blog.kakaocdn.net/dn/dgGzen/btrMDXayFXx/fgcnpLVwh4R8CKRMjuKTDK/img.png" style="width:140px; "/></a>
-    <div class="mytitle" onclick="logout1()">
-        <button type="button" class="btn btn-right  " onclick="logout()">로그아웃</button>
+  </head>
+  <body>
+    <div class="mainlogo" alt="logo">
+      <a href="http://192.168.219.100:4000/intro/"
+        ><img
+          src="https://blog.kakaocdn.net/dn/dgGzen/btrMDXayFXx/fgcnpLVwh4R8CKRMjuKTDK/img.png"
+          style="width: 140px"
+      /></a>
+      <div class="mytitle" onclick="logout1()">
+        <button type="button" class="btn btn-right" onclick="logout()">
+          로그아웃
+        </button>
+      </div>
     </div>
-</div>
-<div class="wrap">
-    <div class="mypost" id="myposts">
-
-    </div>
-    <div class="comment-box" id="comment1">
+    <div class="wrap">
+      <div class="mypost" id="myposts"></div>
+      <div class="comment-box" id="comment1">
         <div class="comment2">
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="name"/>
-                <label for="floatingInput">글쓴이</label>
-            </div>
-            <div class="form-floating">
-          <textarea
-                  class="form-control"
-                  id="comment"
-                  style="height: 100px"
-          ></textarea>
-                <label for="floatingTextarea2">내용</label>
-            </div>
-            <div class="mybtn2">
-                <button
-                        type="button"
-                        onclick="save_comment()"
-                        class="btn btn-outline-dark"
-                >
-                    작성하기
-                </button>
-                <button
-                        type="button"
-                        onclick="close_box()"
-                        class="btn btn-outline-dark"
-                >
-                    작성취소
-                </button>
-            </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="name" />
+            <label for="floatingInput">글쓴이</label>
+          </div>
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              id="comment"
+              style="height: 100px"
+            ></textarea>
+            <label for="floatingTextarea2">내용</label>
+          </div>
+          <div class="mybtn2">
+            <button
+              type="button"
+              onclick="save_comment()"
+              class="btn btn-outline-dark"
+            >
+              작성하기
+            </button>
+            <button
+              type="button"
+              onclick="close_box()"
+              class="btn btn-outline-dark"
+            >
+              작성취소
+            </button>
+          </div>
         </div>
+      </div>
+      <div class="mycards" id="comment-list"></div>
     </div>
-    <div class="mycards" id="comment-list"></div>
-</div>
-</body>
+  </body>
 </html>
