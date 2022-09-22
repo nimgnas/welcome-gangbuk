@@ -1,143 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+    />
 
     <title>어서와 강북은 처음이지 ~?</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap"
-      rel="stylesheet"
-    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+
 
     <style>
-      * {
-        font-family: "Gamja Flower", cursive;
-      }
-      .mytitle {
-        border-bottom: double 3px black;
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+            background-color: #FFAEC0;
+        }
 
-        width: 100%;
-        max-width: 1500px;
-        height: 120px;
+        .mytitle {
+            /*border-bottom: double 3px black;*/
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+            /*width: 100%;*/
+            /*max-width: 1500px;*/
+            /*height: 120px;*/
 
-        margin-bottom: 99px;
-      }
+            /*display: flex;*/
+            /*flex-direction: column;*/
+            /*align-items: center;*/
+            /*justify-content: center;*/
 
-      .box1 {
-        width: 100%;
-        max-width: 572px;
-        height: 100%;
+            /*margin-bottom: 99px;*/
 
-        background-color: aqua;
+            right: 0;
+            position: absolute;
+            right: 37px;
+            bottom: 20px;
+        }
 
-        /*margin: 100px 300px auto 300px;*/
-        margin: auto;
+        .mainlogo {
+            /*width: 120px;*/
+            /*height: 60px;*/
+            /*margin: 15px auto 0 auto;*/
 
-        border-style: double;
-      }
+            padding: 20px;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-bottom: 1px solid transparent;
+            background-color: #FFAEC0;
 
-      .title_box {
-        margin: 15px;
-      }
 
-      .comments-box {
-        margin: 15px;
-      }
+        }
 
-      .link_box {
-        margin: 15px;
-      }
+        .box1 {
+            width: 100%;
+            max-width: 572px;
+            height: 100%;
 
-      .img_box {
-        margin: 15px;
-      }
+            {#background-color: #eef1ff;;#}
+            background-color: white;
+            /*margin: 100px 300px auto 300px;*/
+            margin-top:50px;
+            {#border:1px solid gray;#}
+            box-shadow: 0px 0px 3px 0px black;
+            border-radius: 3px;
+            {#border: 1px solid black ;#}
+        }
 
-      .box1 > button {
-        margin: 5px;
-      }
+        .boxs {
+            margin-top: 13px;
 
-      .box1 > button:hover {
-        color: black;
-        box-shadow: 0 100px 0 100px rgba(0, 0, 0, 0.5) inset;
-      }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .title_box {
+            margin: 15px;
+        }
+
+        .comments-box {
+            margin: 15px;
+        }
+
+        .link_box {
+            margin: 15px;
+        }
+
+        .img_box {
+            margin: 15px;
+        }
+
+        .box1 > button {
+            {#margin: 5px;#}
+        }
+
+        .box1 > button:hover {
+            color: black;
+            box-shadow: 0 100px 0 100px rgba(0, 0, 0, 0.5) inset;
+        }
+
+        .mybtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom:15px;
+            background-color: white;
+        }
+
+        .mybtn > button {
+            margin-left:10px;
+        }
+
+        .mybtn > button:hover {
+
+        }
     </style>
     <script>
-      function save_writing() {
-        let title = $("#title").val();
-        let desc = $("#desc").val();
-        let link = $("#link").val();
-        let img = $("#img").val();
+        function save_writing() {
+            let title = $("#title").val();
+            let desc = $("#desc").val();
+            let link = $("#link").val();
+            let img = $("#img").val();
 
-        $.ajax({
-          type: "POST",
-          url: "/api/write",
-          data: { title_give: title, desc_give: desc, link_give: link , img_give:img},
-          success: function (response) {
-            alert(response["msg"]);
-            window.location.href = "/intro"
-          },
-        });
-      }
+            $.ajax({
+                type: "POST",
+                url: "/api/write",
+                data: {title_give: title, desc_give: desc, link_give: link, img_give: img},
+                success: function (response) {
+                    alert(response["msg"]);
+                    window.location.href = "/intro"
+                },
+            });
+        }
+
+        function get_queryString() {
+            const pathName = window.location.pathname; // location.pathname 함수를 사용해 도메인 뒤 주소를 가져온다.
+            const query = location.search;
+            const contentId = new URLSearchParams(query).get("contentId");
+
+            return contentId;
+        }
+
+        // URL typeId 적혀있는 파라미터를 받아오는 함수 ****
+        function get_typeId() {
+            const pathName = window.location.pathname; // location.pathname 함수를 사용해 도메인 뒤 주소를 가져온다.
+            const typeId = pathName.slice(8, 10); // pathName에서 typeId를 나타내는 주소만 가져온다
+            return typeId;
+        }
+
+        // // 로컬 스토리지 토큰 존재여부 확인, 토큰 체크
+        function check_token() {
+            token = window.localStorage.getItem("token");
+            if (!token) window.location.href = "/";
+
+            $.ajax({
+                type: "POST",
+                url: "/api/tokenCheck",
+                data: {token_give: token},
+                success: function (response) {
+                    if (response.result === "fail") {
+                        alert(response.msg);
+                        logout();
+                    }
+                },
+            });
+        }
+
+        function logout() {
+            window.localStorage.removeItem("token");
+            window.location.href = "/";
+        }
     </script>
-  </head>
-  <body>
-    <h1 class="mytitle">어서와 강북은 처음이지 ~? 🧐</h1>
-    <div class="box1">
-      <div class="title_box">
-        <textarea
-          class="form-control"
-          placeholder="제목"
-          id="title"
-          style="padding-right: 405px; white-space: pre"
-        ></textarea>
-      </div>
-      <div class="comments-box">
-        <textarea
-          class="form-control"
-          placeholder="내용"
-          id="desc"
-          style="padding-right: 405px; height: 100px; white-space: pre"
-        ></textarea>
-      </div>
-      <div class="link_box">
-        <textarea
-          class="form-control"
-          placeholder="링크"
-          id="link"
-          style="padding-right: 405px; white-space: pre"
-        ></textarea>
-      </div>
-      <div class="img_box">
-        <input
-          class="form-control"
-          placeholder="이미지링크"
-          id="img"
-          style="padding-right: 405px; white-space: pre"
-        ></input>
-      </div>
-      <button
-        onclick="save_writing()"
-        type="button"
-        class="btn btn-dark btn-lg"
-        style="margin-left: 209px"
-      >
-        작성하기
-      </button>
-      <button
-        type="button"
-        class="btn btn-dark btn-lg"
-        onclick="location.href='/intro'"
-      >
-        작성취소
-      </button>
+</head>
+<body>
+<div class="mainlogo" alt="logo"><a href="http://192.168.219.100:4000/intro/"><img
+        src="https://blog.kakaocdn.net/dn/dgGzen/btrMDXayFXx/fgcnpLVwh4R8CKRMjuKTDK/img.png" style="width:140px; margin-right:17px;"/></a>
+    <div class="mytitle" onclick="logout1()">
+        <button type="button" class="btn btn-right" onclick="logout()">로그아웃</button>
     </div>
-  </body>
+</div>
+<div class="boxs">
+    <div class="box1">
+
+        <div class="title_box">
+        <textarea
+                class="form-control"
+                placeholder="제목"
+                id="title"
+                style="padding-right: 405px; white-space: pre"
+        ></textarea>
+        </div>
+        <div class="comments-box">
+        <textarea
+                class="form-control"
+                placeholder="내용"
+                id="desc"
+                style="padding-right: 405px; height: 100px; white-space: pre"
+        ></textarea>
+        </div>
+        <div class="link_box">
+        <textarea
+                class="form-control"
+                placeholder="링크"
+                id="link"
+                style="padding-right: 405px; white-space: pre"
+        ></textarea>
+        </div>
+        <div class="img_box">
+            <input
+                    class="form-control"
+                    placeholder="이미지링크"
+                    id="img"
+                    style="padding-right: 405px; white-space: pre"
+            ></input>
+        </div>
+        <div class="mybtn">
+            <button
+                    onclick="save_writing()"
+                    type="button"
+                    class="btn btn-outline-dark"
+{#                    style="margin-left: 209px"#}
+            >작성하기
+            </button>
+            <button
+                    type="button"
+                    class="btn btn-outline-dark"
+                    onclick="location.href='/intro'"
+            >작성취소
+            </button>
+        </div>
+    </div>
+</div>
+</body>
 </html>

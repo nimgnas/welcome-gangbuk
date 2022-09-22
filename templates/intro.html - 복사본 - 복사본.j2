@@ -14,9 +14,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-
-
-
     <script>
       let freeBoard = true;
 
@@ -96,29 +93,16 @@
       }
 
     </script>
-
-
     <title>intro</title>
-
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
-
-
     <style>
-        * {
-        font-family: 'Gowun Dodum', sans-serif;
-                        }
       .container {
-        width: 100%;
-        height: 100%;
-        {#margin: 0 auto;#}
-
-        background-color: #FFAEC0;
+        width: 80%;
+        height: 80vh;
+        margin: 0 auto;
       }
 
       .button_box {
-        margin-top: 20px;
+        margin-top: 30px;
         width: 100%;
         height: 100px;
         display: flex;
@@ -126,7 +110,7 @@
         align-items: flex-start;
       }
       .content_box {
-        margin-top: 30px;
+        margin-top: 50px;
         width: 100%;
         display: grid;
         justify-content: center;
@@ -150,9 +134,9 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        border-bottom:1px solid transparent;
-        background-color:#FFAEC0;
+        border-bottom:1px solid grey
 
+        background-color:#eef1ff;
       }
 
       .banner > h1 {
@@ -160,7 +144,7 @@
       }
 
       .banner > img {
-        width:140px;
+        height: 100%
       }
 
       .banner > .btn_wrapper {
@@ -173,18 +157,14 @@
       .card-img-top {
         height: 200px;
       }
-
-      .btn-group {
-        margin-top:40px;
-      }
     </style>
   </head>
   <body>
     <div class="banner">
-      <a href="http://192.168.219.100:4000/intro/"><img src="https://blog.kakaocdn.net/dn/dgGzen/btrMDXayFXx/fgcnpLVwh4R8CKRMjuKTDK/img.png" style="width:140px; ;"/></a>
+      <img src="https://user-images.githubusercontent.com/85691654/191506693-a2b50cb0-d5e9-4c25-8d30-b2a8c5531ecc.png">
       <div class="btn_wrapper">
-      <button type="button" class="btn btn-right" id="write" onclick="window.location.href='/write'">글쓰기</button>
-      <button type="button" class="btn btn-right" onclick="logout()">로그아웃</button>
+      <button type="button" class="btn btn-secondary btn-sm" id="write" onclick="window.location.href='/write'">글쓰기</button>
+      <button type="button" class="btn btn-secondary btn-sm" onclick="logout()">로그아웃</button>
       </div>
     </div>
     <div class="container">
@@ -192,7 +172,7 @@
         <div class="btn-group">
           <button
             type="button"
-            class="btn btn-outline-dark  dropdown-toggle"
+            class="btn btn-primary dropdown-toggle"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
@@ -213,7 +193,7 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="btn btn-outline-dark" onclick="change_category('')" style="margin-top:40px;">
+        <button type="button" class="btn btn-dark" onclick="change_category('')">
           자유게시판
         </button>
       </div>
